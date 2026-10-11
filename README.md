@@ -20,7 +20,7 @@ A fully featured, open-source Geometry Dash Demon List web application inspired 
 ### 📦 Installation & Deployment Guide
 1. **Download or Clone:** Click the green **Code** button at the top of this repository and select **Download ZIP**, or clone it via Git:
    ```bash
-   git clone https://github.com/Dylanlionel959-del/demonlisttemplate-172.git demonlist
+   git clone https://github.com/dylanlionel959-del/demonlisttemplate-172.git demonlist
    ```
 2. **Extract & Upload:** Extract the ZIP file on your computer and upload the contents into a new folder (e.g., `demonlist`, `dl`, or any name you prefer) inside your web server's **FTP / SFTP** public directory (such as `public_html/`).
 
