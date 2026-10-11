@@ -1,0 +1,19 @@
+{
+  "_comment": "# This file stores the level data, creator, verifier, and records for Bloodbath.",
+  "id": 1,
+  "position": 1,
+  "name": "Bloodbath",
+  "levelId": "10565740",
+  "publisher": "Riot",
+  "verifier": "Riot",
+  "verificationVideo": "https://youtu.be/QxWtQCmOiWY?si=9dqVxT4YT_HNpDUo",
+  "points": 100,
+  "minProgress": 100,
+  "records": [
+    {
+      "player": "Zoink",
+      "progress": 100,
+      "video": "https://youtu.be/QxWtQCmOiWY?si=9dqVxT4YT_HNpDUo"
+    }
+  ]
+}
