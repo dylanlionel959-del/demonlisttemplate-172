@@ -36,7 +36,7 @@ A fully featured, open-source Geometry Dash Demon List web application inspired 
 {
   "id": 1,
   "position": 1,
-  "name": "Level Name",
+  "name": "LevelName",
   "levelId": "Level ID",
   "publisher": "Creator Name",
   "verifier": "Verifier Name",
@@ -92,8 +92,8 @@ Una aplicación web de Demon List de Geometry Dash de código abierto y completa
 {
   "id": 1,
   "position": 1,
-  "name": "Level Name",
-  "levelId": "ID del Nive",
+  "name": "Nombre del nivel",
+  "levelId": "ID del Nivel",
   "publisher": "Nombre del Creador",
   "verifier": "Nombre Del Verificador",
   "verificationVideo": "https://youtu.be/XXXXXXXXXXX",
@@ -114,7 +114,7 @@ Una aplicación web de Demon List de Geometry Dash de código abierto y completa
 Simplemente anota los nombres de los archivos de tus niveles sin la extensión `.json` en orden de dificultad/posición:
 ```json
 [
-  "LevelName",
+  "Nombre del nivel",
   "Flamewall",
   "Bloodbath"
 ]
