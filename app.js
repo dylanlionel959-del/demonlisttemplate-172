@@ -70,7 +70,10 @@ async function loadDemonList() {
         const listResponse = await fetch('database/list.json');
         if (!listResponse.ok) throw new Error("Could not load list.json");
         
-        const levelNames = await listResponse.json();
+        // Lectura como texto plano para evitar bloqueos por cabeceras MIME del servidor
+        const textData = await listResponse.text();
+        const levelNames = JSON.parse(textData);
+        
         const demonsArray = [];
 
         if (Array.isArray(levelNames)) {
@@ -81,7 +84,8 @@ async function loadDemonList() {
                 try {
                     const response = await fetch(`database/${fileName}`);
                     if (response.ok) {
-                        const levelData = await response.json();
+                        const levelText = await response.text();
+                        const levelData = JSON.parse(levelText);
                         levelData.position = i + 1;
                         demonsArray.push(levelData);
                     }
