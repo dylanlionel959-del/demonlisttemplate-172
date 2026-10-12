@@ -42,14 +42,12 @@ async function loadConfig() {
         if (response.ok) {
             const config = await response.json();
             
-            // Cargar el nombre de la Demon List
             if (config.name) {
                 const titleEl = document.getElementById('header-title');
                 if (titleEl) titleEl.innerText = config.name;
                 document.title = config.name;
             }
 
-            // Cargar la versión actual en el header de manera segura para HTTPS
             if (config.currentVersion) {
                 const headerNav = document.querySelector('#main-header .flex.items-center.space-x-6');
                 if (headerNav && !document.getElementById('version-badge')) {
@@ -69,8 +67,9 @@ async function loadConfig() {
 async function loadDemonList() {
     await loadConfig();
     try {
-        const listResponse = await fetch('database/List.json');
-        if (!listResponse.ok) throw new Error("Could not load List.json");
+        // Ahora busca list.json en minúsculas para máxima compatibilidad
+        const listResponse = await fetch('database/list.json');
+        if (!listResponse.ok) throw new Error("Could not load list.json");
         
         const levelNames = await listResponse.json();
         const demonsArray = [];
