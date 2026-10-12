@@ -1,0 +1,19 @@
+name: Auto Merge & Branch Sync
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  auto-merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Information Sync
+        run: |
+          echo "Processing merge for branch updates..."
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          
