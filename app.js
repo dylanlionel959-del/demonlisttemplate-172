@@ -36,7 +36,38 @@ function applyDynamicTheme() {
     updateRouletteUI();
 }
 
+async function loadConfig() {
+    try {
+        const response = await fetch('database/demonlistinfo.json');
+        if (response.ok) {
+            const config = await response.json();
+            
+            // Cargar el nombre de la Demon List
+            if (config.name) {
+                const titleEl = document.getElementById('header-title');
+                if (titleEl) titleEl.innerText = config.name;
+                document.title = config.name;
+            }
+
+            // Cargar la versión actual en el header de manera segura para HTTPS
+            if (config.currentVersion) {
+                const headerNav = document.querySelector('#main-header .flex.items-center.space-x-6');
+                if (headerNav && !document.getElementById('version-badge')) {
+                    const badge = document.createElement('div');
+                    badge.id = 'version-badge';
+                    badge.className = "text-xs bg-black/20 px-2.5 py-1 rounded-lg border border-white/20 font-mono";
+                    badge.innerText = `v${config.currentVersion}`;
+                    headerNav.prepend(badge);
+                }
+            }
+        }
+    } catch (e) {
+        console.warn('Could not load demonlistinfo.json');
+    }
+}
+
 async function loadDemonList() {
+    await loadConfig();
     try {
         const listResponse = await fetch('database/List.json');
         if (!listResponse.ok) throw new Error("Could not load List.json");
@@ -148,7 +179,7 @@ function renderDetail() {
                 <div class="text-base text-black font-mono">${d.points}</div>
             </div>
             <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
-                <div class="text-gray-500 mb-1 text-[10px]">ID</div>
+                <div class="text-gray-500 mb-1 text-[10px]">Level ID</div>
                 <div class="text-base text-black font-mono">${d.levelId || 'N/A'}</div>
             </div>
             <div class="bg-gray-50 p-4 rounded-xl border border-gray-200">
@@ -401,4 +432,3 @@ window.changeThemeColor = changeThemeColor;
 document.addEventListener('DOMContentLoaded', () => {
     loadDemonList();
 });
-
