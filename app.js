@@ -38,7 +38,7 @@ function applyDynamicTheme() {
 
 async function loadConfig() {
     try {
-        const response = await fetch('database/demonlistinfo.json');
+        const response = await fetch('/database/demonlistinfo.json');
         if (response.ok) {
             const config = await response.json();
             
@@ -67,8 +67,8 @@ async function loadConfig() {
 async function loadDemonList() {
     await loadConfig();
     try {
-        // Ahora busca list.json en minúsculas para máxima compatibilidad
-        const listResponse = await fetch('database/list.json');
+        // Usamos ruta absoluta con barra al inicio para asegurar que el servidor la encuentre
+        const listResponse = await fetch('/database/list.json');
         if (!listResponse.ok) throw new Error("Could not load list.json");
         
         const levelNames = await listResponse.json();
@@ -80,7 +80,7 @@ async function loadDemonList() {
                 const fileName = levelName.toLowerCase().replace(/\s+/g, '') + '.json';
                 
                 try {
-                    const response = await fetch(`database/${fileName}`);
+                    const response = await fetch(`/database/${fileName}`);
                     if (response.ok) {
                         const levelData = await response.json();
                         levelData.position = i + 1;
