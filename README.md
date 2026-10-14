@@ -25,7 +25,7 @@ A fully featured, open-source Geometry Dash Demon List web application inspired 
 2. **Extract & Upload:** Extract the ZIP file on your computer and upload the contents into a new folder (e.g., `demonlist`, `dl`, or any name you prefer) inside your web server's **FTP / SFTP** public directory (such as `public_html/`).
 
 ### ⚠️ Important Warning: JSON Syntax
-> **WARNING:** Always ensure your JSON files have valid syntax (correct commas, quotation marks, and brackets). A single missing comma or unclosed quote in any level file inside the `database/` folder will break the parser and cause the site to fail to load levels.
+> **WARNING:** Always ensure your JSON files have valid syntax (correct commas, quotation marks, and brackets). A single missing comma or unclosed quote in any level file inside the `database/` folder will break the parser and cause the site to fail to load levels and The same thing happens when it doesn't respect lowercase letters and doesn't use uppercase letters.
 > 
 > *Tip: If you don't want to modify or write JSON files manually, you can simply ask an AI to format your level data for you!*
 
@@ -81,7 +81,7 @@ Una aplicación web de Demon List de Geometry Dash de código abierto y completa
 2. **Descomprimir y Subir:** Extrae el archivo ZIP en tu computadora y sube el contenido dentro de una nueva carpeta (por ejemplo, `demonlist`, `dl` o el nombre que prefieras) en el directorio público **FTP / SFTP** de tu servidor web (como `public_html/`).
 
 ### ⚠️ Advertencia Importante: Sintaxis de los JSON
-> **ADVERTENCIA:** Asegúrate siempre de que tus archivos JSON tengan una sintaxis válida (comas, comillas y llaves correctas). Una sola coma faltante o una comilla sin cerrar en cualquier archivo de nivel dentro de la carpeta `database/` corromperá el sitio y hará que los niveles dejen de cargar.
+> **ADVERTENCIA:** Asegúrate siempre de que tus archivos JSON tengan una sintaxis válida (comas, comillas y llaves correctas). Una sola coma faltante o una comilla sin cerrar en cualquier archivo de nivel dentro de la carpeta `database/` corromperá el sitio y hará que los niveles dejen de cargar y también pasa lo mismo cuando no respeta las minúsculas y no una mayúscula.
 > 
 > *Consejo: Si no deseas modificar o redactar archivos JSON manualmente de forma tediosa, ¡puedes pedírselo directamente a una Inteligencia Artificial!*
 
