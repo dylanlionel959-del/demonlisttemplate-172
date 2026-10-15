@@ -81,7 +81,7 @@ Una aplicación web de Demon List de Geometry Dash de código abierto y completa
 2. **Descomprimir y Subir:** Extrae el archivo ZIP en tu computadora y sube el contenido dentro de una nueva carpeta (por ejemplo, `demonlist`, `dl` o el nombre que prefieras) en el directorio público **FTP / SFTP** de tu servidor web (como `public_html/`).
 
 ### ⚠️ Advertencia Importante: Sintaxis de los JSON
-> **ADVERTENCIA:** Asegúrate siempre de que tus archivos JSON tengan una sintaxis válida (comas, comillas y llaves correctas). Una sola coma faltante o una comilla sin cerrar en cualquier archivo de nivel dentro de la carpeta `database/` corromperá el sitio y hará que los niveles dejen de cargar y también pasa lo mismo cuando no respeta las minúsculas y no una mayúscula.
+> **ADVERTENCIA:** Asegúrate siempre de que tus archivos JSON tengan una sintaxis válida (comas, comillas y llaves correctas). Una sola coma faltante o una comilla sin cerrar en cualquier archivo de nivel dentro de la carpeta `database/` corromperá el sitio y hará que los niveles dejen de cargar y también pasa lo mismo cuando no respeta las minúsculas y no una mayúscula y en. list.json el nivel debe ser lo mismo que pusido en el campo name en el json.
 > 
 > *Consejo: Si no deseas modificar o redactar archivos JSON manualmente de forma tediosa, ¡puedes pedírselo directamente a una Inteligencia Artificial!*
 
